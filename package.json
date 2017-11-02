@@ -1,0 +1,25 @@
+{
+  "name": "FindAMeeting_AngularJS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bshunk/FindAMeeting_AngularJS"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bshunk/FindAMeeting_AngularJS/issues"
+  },
+  "homepage": "https://github.com/bshunk/FindAMeeting_AngularJS",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-route": "^1.6.6",
+    "jquery": "^3.2.1",
+    "materialize-css": "^0.100.2"
+  }
+}
