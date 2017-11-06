@@ -1,6 +1,7 @@
 <div class="home-container">
   <div class="home-row-container">
     <div class="home-column-container">
+      
       <div>
         <h1>Find A Meeting</h1>
       </div>
@@ -11,15 +12,13 @@
       <h7 ng-if="isLoggedIn" class="top-right">Welcome <a href="#" ng-click="logout()">{{username}}</a></h7> !
       <p>In the options below, select the relevant information to help you find a meeting!</p>
       
-      <div class='nav' ng-app="findAMeeting" ng-controller="MeetingsController">
+      <div class="home" ng-app="findAMeeting" ng-controller="MeetingsController">
         <p>Category</p>
-        <div>
+        <div class="home">
           <select ng-change="getMeetings()" ng-options="meeting as meeting for meeting in meetings" ng-model="selection.meetings"></select>  
-      <!-- <div ng-if="isLoggedIn" class="menu-container">
-        <div class="menu-item-container">
-          <a class="waves-effect waves-yellow menu-item" ng-click="newGame()" ng-mouseover="show=!show" ng-mouseleave="show=!show">Play Game</a> -->
         </div>
       </div>
+
     </div>
   </div>
 </div>

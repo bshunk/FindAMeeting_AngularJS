@@ -6,7 +6,7 @@ app.factory('MeetingsFactory', function($q, $http) {
   
   let getMeetings = (city, day, time, type, group, location) => {
     return $q( (resolve, reject) => {
-      $http.get(`${baseURL}/Meetings/${city.id}/${day.id}/${time.id}/${type.id}/${group.id}/${location.id}`)
+      $http.get(`${baseURL}/Meetings/${category.id}`)
       .then( (data) => {
         resolve(data);
       })
