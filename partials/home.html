@@ -11,10 +11,10 @@
       <h7 ng-if="isLoggedIn" class="top-right">Welcome <a href="#" ng-click="logout()">{{username}}</a></h7> !
       <p>In the options below, select the relevant information to help you find a meeting!</p>
       
-      <div class='nav' ng-app="eSword" ng-controller="MeetingsController">
-        <h2>Type of meeting</h2>
-        <div class="nav">
-          <select ng-change="getMeetings()" ng-options="meeting as meeting.tag for meeting in meetings" ng-model="selection.translation"></select>  
+      <div class='nav' ng-app="findAMeeting" ng-controller="MeetingsController">
+        <p>Category</p>
+        <div>
+          <select ng-change="getMeetings()" ng-options="meeting as meeting for meeting in meetings" ng-model="selection.meetings"></select>  
       <!-- <div ng-if="isLoggedIn" class="menu-container">
         <div class="menu-item-container">
           <a class="waves-effect waves-yellow menu-item" ng-click="newGame()" ng-mouseover="show=!show" ng-mouseleave="show=!show">Play Game</a> -->
