@@ -4,7 +4,7 @@ app.factory('MeetingsFactory', function($q, $http) {
   
   let getMeetings = () => {
     return $q( (resolve, reject) => {
-      $http.get(`getAllMeetings`)
+      $http.get(`http://localhost:8000/api/v1/meetings`)
       .then( (data) => {
         resolve(data);
       })

@@ -27,18 +27,18 @@ app.controller('HomeCtrl', function($scope, $location, authFactory, MeetingsFact
     $location.url('/');
   };
 
-  $scope.authStatus();
+  // $scope.authStatus();
 
   $scope.getMeetings = () => {
-    console.log('getMeetings', getMeetings);
-    MeetingsFactory.getMeetings($scope.selection.meetings)
+    MeetingsFactory.getMeetings()
     .then( (meetings) => {
-      console.log('category', $scope.selection.meetings);
       $scope.meetings = meetings.data;
     })
     .catch( (err) => {
       console.log('error', err);
     });
   }
+  
+  $scope.getMeetings();
 
 });
