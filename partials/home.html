@@ -5,14 +5,14 @@
       <div>
         <h1>Find A Meeting</h1>
       </div>
-      <div ng-if="!isLoggedIn" class="container">
-        <a class="waves-effect waves-light btn-large green" href="/#!/login">Login</a>
-        <a class="waves-effect waves-light btn-large blue" href="/#!/register">Register</a>
-      </div>
+        <div ng-if="!isLoggedIn" class="container">
+          <a class="waves-effect waves-light btn-large green" href="/#!/login">Login</a>
+          <a class="waves-effect waves-light btn-large blue" href="/#!/register">Register</a>
+        </div>
       <h7 ng-if="isLoggedIn" class="top-right">Welcome <a href="#" ng-click="logout()">{{username}}</a></h7> !
       <p>In the options below, select the relevant information to help you find a meeting!</p>
       
-      <div class="home" ng-app="findAMeeting" ng-controller="MeetingsController">
+      <div class="home">
         <p>Category</p>
         <div class="home">
           <select ng-change="getMeetings()" ng-options="meeting as meeting for meeting in meetings" ng-model="selection.meetings"></select>  

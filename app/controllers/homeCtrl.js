@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('HomeCtrl', function($scope, $location, authFactory) {
+app.controller('HomeCtrl', function($scope, $location, authFactory, MeetingsFactory) {
 
   $scope.show='false';
 
@@ -28,5 +28,17 @@ app.controller('HomeCtrl', function($scope, $location, authFactory) {
   };
 
   $scope.authStatus();
+
+  $scope.getMeetings = () => {
+    console.log('getMeetings', getMeetings);
+    MeetingsFactory.getMeetings($scope.selection.meetings)
+    .then( (meetings) => {
+      console.log('category', $scope.selection.meetings);
+      $scope.meetings = meetings.data;
+    })
+    .catch( (err) => {
+      console.log('error', err);
+    });
+  }
 
 });

@@ -2,11 +2,9 @@
 
 app.factory('MeetingsFactory', function($q, $http) {
   
-  const baseUrl = 'http://localhost:3000';
-  
-  let getMeetings = (city, day, time, type, group, location) => {
+  let getMeetings = () => {
     return $q( (resolve, reject) => {
-      $http.get(`${baseURL}/Meetings/${category.id}`)
+      $http.get(`getAllMeetings`)
       .then( (data) => {
         resolve(data);
       })
