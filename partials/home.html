@@ -6,13 +6,10 @@
         <h1>Find A Meeting</h1>
       </div>
       <p>In the options below, select the relevant information to help you find a meeting!</p>
-      
-      <div class="home">
-        <p>Select Choices</p>
-        <div class="home">
-          <select ng-change="getMeetings()" ng-options="meeting as meeting for meeting in meetings" ng-model="selection.meetings"></select>  
-        </div>
-      </div>
+
+      <select ng-model="selection.day" ng-options="day for day in days" ng-change="getMeetings()"></select>
+      <select ng-model="selection.time" ng-options="time for time in times" ng-change="getMeetings()"></select>
+      <select ng-model="selection.city" ng-options="city for city in city" ng-change="getMeetings()"></select>
 
       <div ng-repeat="meeting in meetings">
         <p>
