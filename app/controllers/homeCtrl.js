@@ -33,6 +33,7 @@ app.controller('HomeCtrl', function($scope, $location, authFactory, MeetingsFact
     MeetingsFactory.getMeetings()
     .then( (meetings) => {
       $scope.meetings = meetings.data;
+      console.log("$SCOPE.MEETINGS", $scope.meetings);
     })
     .catch( (err) => {
       console.log('error', err);
@@ -40,5 +41,7 @@ app.controller('HomeCtrl', function($scope, $location, authFactory, MeetingsFact
   }
   
   $scope.getMeetings();
+
+
 
 });

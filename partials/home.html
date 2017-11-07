@@ -8,11 +8,23 @@
       <p>In the options below, select the relevant information to help you find a meeting!</p>
       
       <div class="home">
-        <p>Category</p>
+        <p>Select Choices</p>
         <div class="home">
           <select ng-change="getMeetings()" ng-options="meeting as meeting for meeting in meetings" ng-model="selection.meetings"></select>  
         </div>
       </div>
+
+      <div ng-repeat="meeting in meetings">
+        <p>
+          <span ng-bind="meeting.group"></span>
+          <span ng-bind="meeting.day"></span>
+          <span ng-bind="meeting.time"></span>
+          <span ng-bind="meeting.location"></span>
+          <span ng-bind="meeting.city"></span>
+          <span ng-bind="meeting.type"></span>
+        </p>
+      </div>
+
 
     </div>
   </div>
