@@ -7,15 +7,15 @@
       </div>
       <p>In the options below, select the relevant information to help you find a meeting!</p>
 
-      <select ng-model="selection.day" ng-options="day for day in days" ng-change="getMeetings()"></select>
+      <select ng-model="selection.day" ng-options="day as day for day in days" ng-change="getMeetings()"></select>
       <select ng-model="selection.time" ng-options="time for time in times" ng-change="getMeetings()"></select>
-      <select ng-model="selection.city" ng-options="city for city in city" ng-change="getMeetings()"></select>
+      <!-- <select ng-model="selection.city" ng-options="city for city in city" ng-change="getMeetings()"></select> -->
 
       <div ng-repeat="meeting in meetings">
         <p>
-          <span ng-bind="meeting.group"></span>
           <span ng-bind="meeting.day"></span>
           <span ng-bind="meeting.time"></span>
+          <span ng-bind="meeting.group"></span>
           <span ng-bind="meeting.location"></span>
           <span ng-bind="meeting.city"></span>
           <span ng-bind="meeting.type"></span>

@@ -6,7 +6,7 @@ app.factory('MeetingsFactory', function($q, $http) {
     console.log("DAY EQUALS", day);
     return $http.get(`http://localhost:8000/api/v1/meetings/${day}`)
   };
-
+  console.log("get meetings equals", getMeetings);
   return { getMeetings };
 
 })

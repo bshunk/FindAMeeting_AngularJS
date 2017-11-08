@@ -2,10 +2,6 @@
 
 app.controller('HomeCtrl', function($scope, $location, authFactory, MeetingsFactory) {
 
-  $(document).ready(function() {
-    $('select').material_select();
-  });
-
   $scope.show='false';
 
   $scope.days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
