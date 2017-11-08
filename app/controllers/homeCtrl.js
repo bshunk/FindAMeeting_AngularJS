@@ -53,15 +53,21 @@ app.controller('HomeCtrl', function($scope, $location, authFactory, MeetingsFact
     location: null
   }
 
-  $scope.addNewMeeting = () => {
-    MeetingsFactory.addNewMeeting()
+  $scope.addNewMeeting = (meeting) => {
+    console.log("meeting in controller", meeting);
+    MeetingsFactory.addNewMeeting(meeting)
     .then( (meetings) => {
-      $scope.meetings = meetings.data;
+      console.log("meetings in controller", meetings);
+      $scope.changeView('/');
     })
     .catch( (err) => {
       console.log('error', err);
     });
   };
 
+  // create new function that changes the view on the route when add new meeting button hits
+  $scope.changeView = (x) => {
+    $location.path(x);
+  }
 
 });

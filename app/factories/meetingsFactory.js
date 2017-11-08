@@ -9,8 +9,9 @@ app.factory('MeetingsFactory', function($q, $http) {
     return $http.get(`http://localhost:8000/api/v1/meetings/${day}/${time}/${city}`)
   };
 
-  let addNewMeeting = () => {
-    return $http.post(`http://localhost:8000/api/v1/meetings/addNewMeeting`)
+  let addNewMeeting = (meeting) => {
+    console.log(meeting);
+    return $http.post(`http://localhost:8000/api/v1/meetings/addNewMeeting`, meeting)
   }
 
   return { getMeetings, addNewMeeting };
