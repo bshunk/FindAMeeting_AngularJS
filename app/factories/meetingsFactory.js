@@ -8,7 +8,11 @@ app.factory('MeetingsFactory', function($q, $http) {
     console.log("CITY EQUALS", city);
     return $http.get(`http://localhost:8000/api/v1/meetings/${day}/${time}/${city}`)
   };
-  console.log("get meetings equals", getMeetings);
-  return { getMeetings };
+
+  let addNewMeeting = () => {
+    return $http.post(`http://localhost:8000/api/v1/meetings/addNewMeeting`)
+  }
+
+  return { getMeetings, addNewMeeting };
 
 })

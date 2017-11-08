@@ -53,5 +53,15 @@ app.controller('HomeCtrl', function($scope, $location, authFactory, MeetingsFact
     location: null
   }
 
+  $scope.addNewMeeting = () => {
+    MeetingsFactory.addNewMeeting()
+    .then( (meetings) => {
+      $scope.meetings = meetings.data;
+    })
+    .catch( (err) => {
+      console.log('error', err);
+    });
+  };
+
 
 });
