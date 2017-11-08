@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JWT Auth</title>
-  <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
+  <title>Find A Meeting</title>
 </head>
 
-<body ng-app="JWT">
+<body ng-app="FAM">
 
   <div ng-view></div>
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
   <script src="node_modules/angular/angular.min.js"></script>
   <script src="node_modules/angular-route/angular-route.min.js"></script>
 
@@ -19,7 +17,10 @@
   <script src="app/controllers/HomeCtrl.js"></script>
   <script src="app/controllers/LoginCtrl.js"></script>
   <script src="app/controllers/RegisterCtrl.js"></script>
+  <script src="app/controllers/MeetingsCtrl.js"></script>
+
   <script src="app/factories/authFactory.js"></script>
+  <script src="app/factories/meetingsFactory.js"></script>
 
 </body>
 </html>

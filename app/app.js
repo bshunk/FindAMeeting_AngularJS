@@ -1,6 +1,6 @@
 'use strict';
 
-const app = angular.module('JWT', ['ngRoute']);
+const app = angular.module('FAM', ['ngRoute']);
 
 app.config(function($routeProvider) {
 
@@ -18,16 +18,16 @@ app.config(function($routeProvider) {
       templateUrl: 'partials/register.html',
       controller: 'RegisterCtrl'
     })
-    .when('/game', {
-      templateUrl: 'partials/game.html',
-      controller: 'GameCtrl',
-      resolve: {
-        //This function is injected with the AuthService where you'll put your authentication logic
-        'auth': function(authFactory) {
-          return authFactory.authenticateRoute();
-        }
-      }
-    })
+    // .when('/game', {
+    //   templateUrl: 'partials/game.html',
+    //   controller: 'GameCtrl',
+    //   resolve: {
+    //     //This function is injected with the AuthService where you'll put your authentication logic
+    //     'auth': function(authFactory) {
+    //       return authFactory.authenticateRoute();
+    //     }
+    //   }
+    // })
     .otherwise('/');
 
 });
