@@ -16,4 +16,4 @@ app.factory('MeetingsFactory', function($q, $http) {
 
   return { getMeetings, addNewMeeting };
 
-})
+});
