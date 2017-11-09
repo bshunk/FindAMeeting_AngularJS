@@ -11,15 +11,28 @@
     <select ng-init="selection.city = cityInit" ng-model="selection.city" ng-options="city as city for city in city" ng-change="getMeetings()"></select>
   </div>
   
-  <div ng-repeat="meeting in meetings" class="meetingsTable" style="margin: auto; width: 45%; text-align: center; padding: 10px; height: auto; overflow-y : auto; border: 1px solid white; color: white; background-color: black;">
-    <div style="">
-      <span ng-bind="meeting.day" class="meetingDay"></span>
-      <span ng-bind="meeting.time" class="meetingTime"></span>
-      <span ng-bind="meeting.group" class="meetingGroup"></span>
-      <span ng-bind="meeting.location" class="meetingLocation"></span>
-      <span ng-bind="meeting.city" class="meetingCity"></span>
-      <span ng-bind="meeting.type" class="meetingType"></span>
+  <div ng-show="noMeetings && daySelected && timeSelected && citySelected" class="alert-message">
+    <p>Sorry, there are no meetings at that day and time!</p>
+  </div>
+
+  <div ng-show="!noMeetings" ng-repeat="meeting in meetings" class="meetings-table">
+    
+    <div class="meeting-container">
+    
+      <span ng-bind="meeting.day" class="meeting-day"></span>
+    
+      <span ng-bind="meeting.time" class="meeting-time"></span>
+    
+      <span ng-bind="meeting.group" class="meeting-group"></span>
+    
+      <span ng-bind="meeting.location" class="meeting-location"></span>
+    
+      <span ng-bind="meeting.city" class="meeting-city"></span>
+    
+      <span ng-bind="meeting.type" class="meeting-type"></span>
+    
     </div>
+  
   </div>
 
   <div id="addMeetingButton" style="text-align: center;">

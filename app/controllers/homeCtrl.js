@@ -34,14 +34,32 @@ app.controller('HomeCtrl', function($scope, $location, authFactory, MeetingsFact
   // commenting out authStatus removes authentication from my app since currently it's not needed
   // $scope.authStatus();
 
+  $scope.noMeetings = false;
+
   // on page load, grabs all meetings from the db and based on user selection, brings back and displays relevant meetings to page
   $scope.getMeetings = () => {
-    $scope.dayInit = localStorage.day;
-    $scope.timeInit = localStorage.time;
-    $scope.cityInit = localStorage.city;
+    $scope.daySelected = false;
+    $scope.timeSelected = false;
+    $scope.citySelected = false;
+    console.log('$scope.selection.time', $scope.selection.time);
+    if($scope.selection.day !== undefined) {
+      $scope.daySelected = true
+    };
+    if($scope.selection.time !== undefined) {
+      $scope.timeSelected = true
+    };
+    if($scope.selection.city !== undefined) {
+      $scope.citySelected = true
+    };
     MeetingsFactory.getMeetings($scope.selection.day, $scope.selection.time, $scope.selection.city)
     .then( (meetings) => {
-      $scope.meetings = meetings.data;
+      console.log("Meetings available are", meetings);
+      if(meetings.data.length === 0) {
+        $scope.noMeetings = true
+      } else {
+        $scope.noMeetings = false;
+        $scope.meetings = meetings.data;
+      }
     })
     .catch( (err) => {
       console.log('error', err);
