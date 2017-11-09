@@ -1,12 +1,37 @@
-<button ng-click="goHome()">Home</button>
-<div>
-  <input ng-model="meeting.day" class="meetingDay" />Day
-  <input ng-model="meeting.time" class="meetingTime" />Time
-  <input ng-model="meeting.group" class="meetingGroup" />Group
-  <input ng-model="meeting.location" class="meetingLocation" />Location
-  <input ng-model="meeting.city" class="meetingCity" />City
-  <input ng-model="meeting.type" class="meetingType" />Type
+<div style="padding-left: 20px; padding-top: 20px;">
+
+  <button ng-click="goHome()">Home</button>
+
+</div>
+
+
+<div class="pageDescription" style="text-align: center; color: white; font-weight: 800;">
+
+  <p>In the form below, fill out each section relating to the details of your new meeting:</p>
+
+</div>
+
+
+<div style="margin: 0 auto; width: 60%; padding: auto; text-align: left; border: 2px solid white; color: white;">
+
+  <input ng-model="meeting.day" class="meetingDay" style="padding-bottom: 5px; width: 30%; color: black; text-align: center;">Day
   
-  <button ng-click="addNewMeeting(meeting)">Submit</button>
+  <input ng-model="meeting.time" class="meetingTime" style="padding-bottom: 5px; width: 30%; color: black; text-align: center;">Time
+  
+  <input ng-model="meeting.group" class="meetingGroup" style="padding-bottom: 5px; width: 30%; color: black; text-align: center;">Group
+
+  <input ng-model="meeting.location" class="meetingLocation" style="padding-bottom: 5px; width: 30%; color: black; text-align: center;">Location
+
+  <input ng-model="meeting.city" class="meetingCity" style="padding-bottom: 5px; width: 30%; color: black; text-align: center;">City
+
+  <input ng-model="meeting.type" class="meetingType" style="padding-bottom: 5px; width: 30%; color: black; text-align: center;">Type
+  
+  
+  <div class="submitMeetingBtn" style="text-align: center;">
+
+    <button ng-click="addNewMeeting(meeting)" style="color: black;">Submit</button>
+  
+  </div>
+
 
 </div>

@@ -2,7 +2,7 @@
 
   <div class="topPageInfo">
     <h1 style="padding-left: 10px; text-align: center; color:white;">Find An AA Meeting!</h1>
-    <p style="padding-left: 10px; text-align: center; color: white;">In the options below, select the day and time to help find a meeting near you!</p>
+    <p style="padding-left: 10px; text-align: center; color: white;">In the options below: select a day, time, and city to find meetings near you!</p>
   </div>
 
   <div style="padding-left: 10px; text-align: center;">
@@ -11,7 +11,7 @@
     <select ng-init="selection.city = cityInit" ng-model="selection.city" ng-options="city as city for city in city" ng-change="getMeetings()"></select>
   </div>
   
-  <div ng-repeat="meeting in meetings" class="meetingsTable" style="margin: auto; width: 45%; text-align: center; padding: 10px; height: auto; overflow-y : auto; border: 1px solid white;  color: black; background-color: white;">
+  <div ng-repeat="meeting in meetings" class="meetingsTable" style="margin: auto; width: 45%; text-align: center; padding: 10px; height: auto; overflow-y : auto; border: 1px solid white; color: white; background-color: black;">
     <div style="">
       <span ng-bind="meeting.day" class="meetingDay"></span>
       <span ng-bind="meeting.time" class="meetingTime"></span>
@@ -21,7 +21,9 @@
       <span ng-bind="meeting.type" class="meetingType"></span>
     </div>
   </div>
-  
-  <button ng-click="changeView('addNewMeeting')" style="margin: 0 auto; text-align: center;">Add A Meeting</button>
+
+  <div id="addMeetingButton" style="text-align: center;">
+    <button ng-click="changeView('addNewMeeting')">Add A Meeting</button>
+  </div>
 
 </div>
