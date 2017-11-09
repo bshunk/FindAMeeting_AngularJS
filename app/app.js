@@ -22,6 +22,10 @@ app.config(function($routeProvider) {
       templateUrl: 'partials/newMeeting.html',
       controller: 'HomeCtrl'
     })
+    .when('/viewMeeting', {
+      templateUrl: 'partials/viewMeetings.html',
+      controller: 'ViewMeetingCtrl'
+    })
     .otherwise('/');
 
 });

@@ -8,9 +8,9 @@
       <p style="padding-left: 10px;">In the options below, select the day and time to help find a meeting near you!</p>
 
       <div style="padding-left: 10px;">
-        <select ng-model="selection.day" ng-options="day as day for day in days" ng-change="getMeetings()" style=""></select>
-        <select ng-model="selection.time" ng-options="time as time for time in times" ng-change="getMeetings()"></select>
-        <select ng-model="selection.city" ng-options="city as city for city in city" ng-change="getMeetings()"></select>
+        <select ng-init="selection.day = Monday" ng-model="selection.day" ng-options="day as day for day in days" ng-change="getMeetings()"></select>
+        <select ng-init="selection.time = timeInit" ng-model="selection.time" ng-options="time as time for time in times" ng-change="getMeetings()"></select>
+        <select ng-init="selection.city = cityInit" ng-model="selection.city" ng-options="city as city for city in city" ng-change="getMeetings()"></select>
       </div>
 
       <div ng-repeat="meeting in meetings" class="meetingsTable" style="margin: auto; width: 45%; border: 1px solid black; padding: 10px; height: auto; overflow-y : auto;">

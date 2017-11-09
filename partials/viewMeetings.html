@@ -1,0 +1,11 @@
+<button ng-click="goHome()">Home</button>
+<div ng-repeat="meeting in meetings" class="meetingsTable" style="margin: auto; width: 45%; border: 1px solid black; padding: 10px; height: auto; overflow-y : auto;">
+  <p>
+    <span ng-bind="meeting.day" class="meetingDay"></span>
+    <span ng-bind="meeting.time" class="meetingTime"></span>
+    <span ng-bind="meeting.group" class="meetingGroup"></span>
+    <span ng-bind="meeting.location" class="meetingLocation"></span>
+    <span ng-bind="meeting.city" class="meetingCity"></span>
+    <span ng-bind="meeting.type" class="meetingType"></span>
+  </p>  
+</div>

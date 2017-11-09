@@ -37,16 +37,20 @@ app.controller('HomeCtrl', function($scope, $location, authFactory, MeetingsFact
 
   $scope.getMeetings = () => {
     console.log("$scope.selection", $scope.selection);
+    console.log("localStorage.day is", localStorage.day);
+    $scope.dayInit = localStorage.day;
+    $scope.timeInit = localStorage.time;
+    $scope.cityInit = localStorage.city;
     MeetingsFactory.getMeetings($scope.selection.day, $scope.selection.time, $scope.selection.city)
     .then( (meetings) => {
       $scope.meetings = meetings.data;
-      console.log("$SCOPE.MEETINGS", $scope.meetings);
+      // console.log("$SCOPE.MEETINGS", $scope.meetings);
     })
     .catch( (err) => {
       console.log('error', err);
     });
   }
-  
+
   $scope.selection = {
     day: null,
     time: null, 
@@ -58,7 +62,10 @@ app.controller('HomeCtrl', function($scope, $location, authFactory, MeetingsFact
     MeetingsFactory.addNewMeeting(meeting)
     .then( (meetings) => {
       console.log("meetings in controller", meetings);
-      $scope.changeView('/');
+      localStorage.day = $scope.meeting.day;
+      localStorage.time = $scope.meeting.time;
+      localStorage.city = $scope.meeting.city;
+      $location.url('/viewMeeting');
     })
     .catch( (err) => {
       console.log('error', err);
