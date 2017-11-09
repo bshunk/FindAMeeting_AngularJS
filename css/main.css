@@ -12,9 +12,9 @@ select {
 }
 
 button {
-  width: 170px;
+  width: 180px;
   font-size: 1.25em;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 #page-headline {
@@ -63,7 +63,7 @@ button {
   border-radius: 25px;
   color: white;
   background-color: rgba(0,0,0,.55);
-  font-size: 2vw;
+  font-size: 1.8vw;
   min-width: 250px;
   min-height: 200px;
 }
@@ -148,7 +148,7 @@ input.placeholder {
   flex-direction: column;
   justify-content: space-around;
   margin: 20px auto 20px auto; 
-  width: 35%;
+  width: 40%;
   padding: 10px; 
   height: auto; 
   text-align: center; 
@@ -157,8 +157,10 @@ input.placeholder {
   border: 1px solid black; 
   border-radius: 25px;
   color: white;
-  background-color: rgba(0,0,0,.65);
-  font-size: 1.1em;
+  background-color: rgba(0,0,0,.55);
+  font-size: 1.8vw;
+  min-width: 250px;
+  min-height: 200px;
 }
 
 .headline-message {
