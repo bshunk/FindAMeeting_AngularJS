@@ -1,4 +1,21 @@
+/********************* Body *********************/
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 /********************* Home page *********************/
+
+select {
+  width: 150px;
+  font-size: 1.5em;
+
+}
+
+button {
+  width: 170px;
+  font-size: 1.25em;
+  border-radius: 5px;
+}
 
 #page-headline {
   padding-left: 10px; 
@@ -10,6 +27,7 @@
   padding-left: 10px; 
   text-align: center; 
   color: white;
+  font-size: 2vw;
 }
 
 .select-boxes {
@@ -35,16 +53,19 @@
   flex-direction: column;
   justify-content: space-around;
   margin: 20px auto 20px auto; 
-  width: 40%;
+  width: 35%;
   padding: 10px; 
   height: auto; 
   text-align: center; 
   align-content: center; 
   overflow-y : auto; 
-  border: 1px solid white; 
-  color: white; 
-  background-color: black;
-  font-size: 1.1em;
+  border: 1px solid black; 
+  border-radius: 25px;
+  color: white;
+  background-color: rgba(0,0,0,.55);
+  font-size: 2vw;
+  min-width: 250px;
+  min-height: 200px;
 }
 
 .meeting-container {
@@ -58,15 +79,17 @@
   flex-direction: column;
   justify-content: space-around;
   margin: 20px auto 20px auto; 
-  width: 40%;
+  width: 35%;
   padding: 10px; 
   height: auto; 
   text-align: center; 
   align-content: center; 
   overflow-y : auto; 
-  border: 1px solid white; 
-  color: white; 
-  background-color: black;
+  border: 1px solid black; 
+  border-radius: 25px;
+  color: white;
+  background-color: rgba(0,0,0,.55);
+  font-size: 1.5em;
 }
 
 .add-meeting-btn {
@@ -78,8 +101,70 @@
 
 /********************* Add Meeting Page *********************/
 
+form {
+  margin: 20px auto 20px auto;
+  padding: 5px;
+  width: 45%;
+  text-align: center;
+}
+
+#home-btn {
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 100px;
+}
+
+.page-description {
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+.meeting-form {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.submit-meeting-btn {
+  text-align: center;
+
+}
+
+input.placeholder {
+  text-align: center;
+}
 
 
+/********************* View Meeting Page *********************/
 
+#home-btn {
+  padding-left: 20px;
+  padding-top: 20px;
+}
 
+.view-meetings-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20px auto 20px auto; 
+  width: 35%;
+  padding: 10px; 
+  height: auto; 
+  text-align: center; 
+  align-content: center; 
+  overflow-y : auto; 
+  border: 1px solid black; 
+  border-radius: 25px;
+  color: white;
+  background-color: rgba(0,0,0,.65);
+  font-size: 1.1em;
+}
+
+.headline-message {
+  color: white;
+  text-align: center;
+}
+
+/* style="margin: 0 auto; width: 60%; padding: auto; text-align: left; border: 2px solid white; color: white;" */
 

@@ -1,47 +1,24 @@
-<div style="padding-left: 20px; padding-top: 20px;">
-  <button ng-click="goHome()">Home</button>
+<div id="home-btn">
+  <button ng-click="goHome()">
+      <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
+  </button>
 </div>
 
-<div class="pageDescription" style="text-align: center; color: white; font-size: 1.5em;">
-  <p>In the form below, input the information about your meeting exactly as the example shows below:</p>
+<div class="page-description">
+  <p>In the form below, input the information about your meeting exactly as the examples shown below:</p>
 </div>
 
 <form>
-  <div class="form-group" style="margin: 0 auto; width: 60%; padding: auto; text-align: left; border: 2px solid white; color: white;">
-    
-    <input ng-model="meeting.day" class="meetingDay" type="text" placeholder="Day" style="padding-bottom: 5px; width: 30%; color: black; text-align: center;">
-    
-    <input ng-model="meeting.time" class="meetingTime" type="text" placeholder="Time" style="padding-bottom: 5px; width: 30%; color: black; text-align: center;">
-    
-    <input ng-model="meeting.group" class="meetingGroup" type="text" placeholder="Group Name" style="padding-bottom: 5px; width: 30%; color: black; text-align: center;">
-    
-    <input ng-model="meeting.location" class="meetingLocation" type="text" placeholder="Building Name And Address" style="padding-bottom: 5px; width: 30%; color: black; text-align: center;">
-    
-    <input ng-model="meeting.city" class="meetingCity" type="text" placeholder="City" style="padding-bottom: 5px; width: 30%; color: black; text-align: center;">
-    
-    <input ng-model="meeting.type" class="meetingType" type="text" placeholder="Type Of Meeting" style="padding-bottom: 5px; width: 30%; color: black; text-align: center;">
+  <div class="form-group">
+    <input ng-model="meeting.day" class="meeting-form form-control" type="text" placeholder="Day ie: Monday">    
+    <input ng-model="meeting.time" class="meeting-form form-control" type="text" placeholder="Time ie: 7:00 AM">
+    <input ng-model="meeting.group" class="meeting-form form-control" type="text" placeholder="Group Name ie: Love and Laughter">
+    <input ng-model="meeting.location" class="meeting-form form-control" type="text" placeholder="Building Name and Address ie: Saturn Baptist Church 1212 Saturn Drive">
+    <input ng-model="meeting.city" class="meeting-form form-control" type="text" placeholder="City ie: Nashville">
+    <input ng-model="meeting.type" class="meeting-form form-control" type="text" placeholder="Type Of Meeting ie: Open">
   
-    <div class="submitMeetingBtn" style="text-align: center;">
-      <button ng-click="addNewMeeting(meeting)" style="color: black;">Submit</button>
+    <div class="submit-meeting-btn">
+      <button class="btn btn-primary" ng-click="addNewMeeting(meeting)">Submit</button>
     </div>
   </div>
 </form>
-
-<!-- <form style="background-color: white; color: black;">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-check">
-    <label class="form-check-label">
-      <input type="checkbox" class="form-check-input">
-      Check me out
-    </label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form> -->

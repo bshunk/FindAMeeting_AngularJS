@@ -7,6 +7,8 @@ app.controller('ViewMeetingCtrl', function($scope, $location, MeetingsFactory) {
     MeetingsFactory.getMeetings(localStorage.day, localStorage.time, localStorage.city)
     .then( (meetings) => {
       $scope.meetings = meetings.data;
+      $scope.meetingDay = meetings.data[0].day
+      $scope.meetingTime = meetings.data[0].time
     })
     .catch( (err) => {
       console.log('error', err);

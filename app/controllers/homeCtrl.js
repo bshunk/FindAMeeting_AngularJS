@@ -59,6 +59,8 @@ app.controller('HomeCtrl', function($scope, $location, authFactory, MeetingsFact
       } else {
         $scope.noMeetings = false;
         $scope.meetings = meetings.data;
+        $scope.meetingDay = meetings.data[0].day
+        $scope.meetingTime = meetings.data[0].time
       }
     })
     .catch( (err) => {
