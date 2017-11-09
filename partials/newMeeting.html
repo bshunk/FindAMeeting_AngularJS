@@ -1,11 +1,24 @@
-<div>
-  <input ng-model="meeting.day" class="meetingDay" />Day
-  <input ng-model="meeting.time" class="meetingTime" />Time
-  <input ng-model="meeting.group" class="meetingGroup" />Group
-  <input ng-model="meeting.location" class="meetingLocation" />Location
-  <input ng-model="meeting.city" class="meetingCity" />City
-  <input ng-model="meeting.type" class="meetingType" />Type
-  
-  <button ng-click="addNewMeeting(meeting)">Submit</button>
-
+<div id="home-btn">
+  <button ng-click="goHome()">
+      <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
+  </button>
 </div>
+
+<div class="page-description">
+  <p>In the form below, input the information about your meeting exactly as the examples shown below:</p>
+</div>
+
+<form>
+  <div class="form-group">
+    <input ng-model="meeting.day" class="meeting-form form-control" type="text" placeholder="Day ie: Monday">    
+    <input ng-model="meeting.time" class="meeting-form form-control" type="text" placeholder="Time ie: 7:00 AM">
+    <input ng-model="meeting.group" class="meeting-form form-control" type="text" placeholder="Group Name ie: Love and Laughter">
+    <input ng-model="meeting.location" class="meeting-form form-control" type="text" placeholder="Building Name and Address ie: Saturn Baptist Church 1212 Saturn Drive">
+    <input ng-model="meeting.city" class="meeting-form form-control" type="text" placeholder="City ie: Nashville">
+    <input ng-model="meeting.type" class="meeting-form form-control" type="text" placeholder="Type Of Meeting ie: Open">
+  
+    <div class="submit-meeting-btn">
+      <button class="btn btn-primary" ng-click="addNewMeeting(meeting)">Submit</button>
+    </div>
+  </div>
+</form>
