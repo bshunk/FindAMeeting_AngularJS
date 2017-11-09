@@ -3,7 +3,7 @@
 app.controller('ViewMeetingCtrl', function($scope, $location, MeetingsFactory) {
 
   $scope.getMeetings = () => {
-    console.log("localStorage.day is", localStorage.day);
+    // console.log("localStorage.day is", localStorage.day);
     MeetingsFactory.getMeetings(localStorage.day, localStorage.time, localStorage.city)
     .then( (meetings) => {
       $scope.meetings = meetings.data;
