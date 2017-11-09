@@ -2,12 +2,11 @@
 
 app.controller('ViewMeetingCtrl', function($scope, $location, MeetingsFactory) {
 
+  // on page redirect after adding a new meeting and clicking submit, brings back all meetings related to the day, time and city of newly added meeting
   $scope.getMeetings = () => {
-    // console.log("localStorage.day is", localStorage.day);
     MeetingsFactory.getMeetings(localStorage.day, localStorage.time, localStorage.city)
     .then( (meetings) => {
       $scope.meetings = meetings.data;
-      // console.log("$SCOPE.MEETINGS", $scope.meetings);
     })
     .catch( (err) => {
       console.log('error', err);
