@@ -1,31 +1,27 @@
-<div class="home-container">
-  <div class="home-row-container">
-    <div class="home-column-container" style="position: center;">
-      
-      <div>
-        <h1 style="padding-left: 10px;">Find An AA Meeting!</h1>
-      </div>
-      <p style="padding-left: 10px;">In the options below, select the day and time to help find a meeting near you!</p>
+<div class="home-column-container">
 
-      <div style="padding-left: 10px;">
-        <select ng-init="selection.day = Monday" ng-model="selection.day" ng-options="day as day for day in days" ng-change="getMeetings()"></select>
-        <select ng-init="selection.time = timeInit" ng-model="selection.time" ng-options="time as time for time in times" ng-change="getMeetings()"></select>
-        <select ng-init="selection.city = cityInit" ng-model="selection.city" ng-options="city as city for city in city" ng-change="getMeetings()"></select>
-      </div>
+  <div class="topPageInfo">
+    <h1 style="padding-left: 10px; text-align: center; color:white;">Find An AA Meeting!</h1>
+    <p style="padding-left: 10px; text-align: center; color: white;">In the options below, select the day and time to help find a meeting near you!</p>
+  </div>
 
-      <div ng-repeat="meeting in meetings" class="meetingsTable" style="margin: auto; width: 45%; border: 1px solid black; padding: 10px; height: auto; overflow-y : auto;">
-        <p>
-          <span ng-bind="meeting.day" class="meetingDay"></span>
-          <span ng-bind="meeting.time" class="meetingTime"></span>
-          <span ng-bind="meeting.group" class="meetingGroup"></span>
-          <span ng-bind="meeting.location" class="meetingLocation"></span>
-          <span ng-bind="meeting.city" class="meetingCity"></span>
-          <span ng-bind="meeting.type" class="meetingType"></span>
-        </p>
-      </div>
-
-      <button ng-click="changeView('addNewMeeting')" style="padding: auto; margin: auto;">Add A Meeting</button>
-
+  <div style="padding-left: 10px; text-align: center;">
+    <select ng-init="selection.day = Monday" ng-model="selection.day" ng-options="day as day for day in days" ng-change="getMeetings()"></select>
+    <select ng-init="selection.time = timeInit" ng-model="selection.time" ng-options="time as time for time in times" ng-change="getMeetings()"></select>
+    <select ng-init="selection.city = cityInit" ng-model="selection.city" ng-options="city as city for city in city" ng-change="getMeetings()"></select>
+  </div>
+  
+  <div ng-repeat="meeting in meetings" class="meetingsTable" style="margin: auto; width: 45%; text-align: center; padding: 10px; height: auto; overflow-y : auto; border: 1px solid white;  color: black; background-color: white;">
+    <div style="">
+      <span ng-bind="meeting.day" class="meetingDay"></span>
+      <span ng-bind="meeting.time" class="meetingTime"></span>
+      <span ng-bind="meeting.group" class="meetingGroup"></span>
+      <span ng-bind="meeting.location" class="meetingLocation"></span>
+      <span ng-bind="meeting.city" class="meetingCity"></span>
+      <span ng-bind="meeting.type" class="meetingType"></span>
     </div>
   </div>
+  
+  <button ng-click="changeView('addNewMeeting')" style="margin: 0 auto; text-align: center;">Add A Meeting</button>
+
 </div>

@@ -74,4 +74,9 @@ app.controller('HomeCtrl', function($scope, $location, authFactory, MeetingsFact
     $location.path(x);
   }
 
+  // when home button is clicked on create new meeting form, user is taken back to home page
+  $scope.goHome = () => {
+    $location.url('/');
+  };
+
 });
