@@ -1,14 +1,14 @@
 <div class="home-column-container">
 
-  <div class="topPageInfo">
+  <div class="top-page-info">
     <h1 style="padding-left: 10px; text-align: center; color:white;">Find An AA Meeting!</h1>
     <p style="padding-left: 10px; text-align: center; color: white;">In the options below: select a day, time, and city to find meetings near you!</p>
   </div>
 
-  <div style="padding-left: 10px; text-align: center;">
-    <select ng-init="selection.day = Monday" ng-model="selection.day" ng-options="day as day for day in days" ng-change="getMeetings()"></select>
-    <select ng-init="selection.time = timeInit" ng-model="selection.time" ng-options="time as time for time in times" ng-change="getMeetings()"></select>
-    <select ng-init="selection.city = cityInit" ng-model="selection.city" ng-options="city as city for city in city" ng-change="getMeetings()"></select>
+  <div class="select-boxes">
+    <select class="select-day" ng-init="selection.day = Monday" ng-model="selection.day" ng-options="day as day for day in days" ng-change="getMeetings()"></select>
+    <select class="select-time" ng-init="selection.time = timeInit" ng-model="selection.time" ng-options="time as time for time in times" ng-change="getMeetings()"></select>
+    <select class="select-city" ng-init="selection.city = cityInit" ng-model="selection.city" ng-options="city as city for city in city" ng-change="getMeetings()"></select>
   </div>
   
   <div ng-show="noMeetings && daySelected && timeSelected && citySelected" class="alert-message">
@@ -16,26 +16,17 @@
   </div>
 
   <div ng-show="!noMeetings" ng-repeat="meeting in meetings" class="meetings-table">
-    
-    <div class="meeting-container">
-    
-      <span ng-bind="meeting.day" class="meeting-day"></span>
-    
-      <span ng-bind="meeting.time" class="meeting-time"></span>
-    
-      <span ng-bind="meeting.group" class="meeting-group"></span>
-    
-      <span ng-bind="meeting.location" class="meeting-location"></span>
-    
-      <span ng-bind="meeting.city" class="meeting-city"></span>
-    
-      <span ng-bind="meeting.type" class="meeting-type"></span>
-    
-    </div>
-  
+    <div class="meeting-container">    
+      <span ng-bind="meeting.day" class="meeting-day"></span> 
+      <span ng-bind="meeting.time" class="meeting-time"></span>    
+      <span ng-bind="meeting.group" class="meeting-group"></span>    
+      <span ng-bind="meeting.location" class="meeting-location"></span>    
+      <span ng-bind="meeting.city" class="meeting-city"></span>    
+      <span ng-bind="meeting.type" class="meeting-type"></span>    
+    </div>  
   </div>
 
-  <div id="addMeetingButton" style="text-align: center;">
+  <div class="add-meeting-btn">
     <button ng-click="changeView('addNewMeeting')">Add A Meeting</button>
   </div>
 
