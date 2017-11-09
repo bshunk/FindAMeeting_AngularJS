@@ -18,16 +18,14 @@ app.config(function($routeProvider) {
       templateUrl: 'partials/register.html',
       controller: 'RegisterCtrl'
     })
-    // .when('/game', {
-    //   templateUrl: 'partials/game.html',
-    //   controller: 'GameCtrl',
-    //   resolve: {
-    //     //This function is injected with the AuthService where you'll put your authentication logic
-    //     'auth': function(authFactory) {
-    //       return authFactory.authenticateRoute();
-    //     }
-    //   }
-    // })
+    .when('/addNewMeeting', {
+      templateUrl: 'partials/newMeeting.html',
+      controller: 'HomeCtrl'
+    })
+    .when('/viewMeeting', {
+      templateUrl: 'partials/viewMeetings.html',
+      controller: 'ViewMeetingCtrl'
+    })
     .otherwise('/');
 
 });
