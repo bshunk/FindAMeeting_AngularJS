@@ -1,8 +1,8 @@
 <div class="home-column-container">
 
   <div class="top-page-info">
-    <h1 style="padding-left: 10px; text-align: center; color:white;">Find An AA Meeting!</h1>
-    <p style="padding-left: 10px; text-align: center; color: white;">In the options below: select a day, time, and city to find meetings near you!</p>
+    <h1 id="page-headline">Find An AA Meeting!</h1>
+    <p id="page-description">In the options below: select a day, time, and city to find meetings near you!</p>
   </div>
 
   <div class="select-boxes">
@@ -12,7 +12,7 @@
   </div>
   
   <div ng-show="noMeetings && daySelected && timeSelected && citySelected" class="alert-message">
-    <p>Sorry, there are no meetings at that day and time!</p>
+    <p>Sorry, there are no meetings on that day or time!</p>
   </div>
 
   <div ng-show="!noMeetings" ng-repeat="meeting in meetings" class="meetings-table">

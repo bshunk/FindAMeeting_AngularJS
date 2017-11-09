@@ -1,3 +1,17 @@
+/********************* Home page *********************/
+
+#page-headline {
+  padding-left: 10px; 
+  text-align: center; 
+  color:white;
+}
+
+#page-description {
+  padding-left: 10px; 
+  text-align: center; 
+  color: white;
+}
+
 .select-boxes {
   padding-left: 10px; 
   text-align: center;
@@ -59,3 +73,13 @@
   text-align: center;
   margin: 20px auto 20px auto;
 }
+
+
+
+/********************* Add Meeting Page *********************/
+
+
+
+
+
+
