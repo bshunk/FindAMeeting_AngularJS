@@ -41,7 +41,6 @@ app.controller('HomeCtrl', function($scope, $location, authFactory, MeetingsFact
     $scope.daySelected = false;
     $scope.timeSelected = false;
     $scope.citySelected = false;
-    console.log('$scope.selection.time', $scope.selection.time);
     if($scope.selection.day !== undefined) {
       $scope.daySelected = true
     };
@@ -53,7 +52,6 @@ app.controller('HomeCtrl', function($scope, $location, authFactory, MeetingsFact
     };
     MeetingsFactory.getMeetings($scope.selection.day, $scope.selection.time, $scope.selection.city)
     .then( (meetings) => {
-      console.log("Meetings available are", meetings);
       if(meetings.data.length === 0) {
         $scope.noMeetings = true
       } else {
